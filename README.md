@@ -23,14 +23,14 @@ A port of the [Islands Dark](https://github.com/bwya77/vscode-dark-islands) them
 ### Automatic (recommended)
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_USER/antigravity-dark-islands/main/install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/p-lozano/antigravity-dark-islands/main/install.sh)
 ```
 
 ### Manual
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/YOUR_USER/antigravity-dark-islands
+   git clone https://github.com/p-lozano/antigravity-dark-islands
    cd antigravity-dark-islands
    ```
 
