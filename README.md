@@ -1,26 +1,41 @@
+<div align="center">
+
 # 🏝️ Islands Dark for Antigravity
 
-A port of the [Islands Dark](https://github.com/bwya77/vscode-dark-islands) theme to **Google Antigravity IDE** — deep backgrounds, warm syntax highlighting, glass-like panels, rounded corners, and smooth animations.
+**A port of [Islands Dark](https://github.com/bwya77/vscode-dark-islands) to Google Antigravity IDE**
 
-> Built on the VS Code engine, Antigravity requires slightly different paths for extensions and settings. This repo handles all of that automatically.
+Deep backgrounds · Warm syntax highlighting · Glass-morphism UI · Smooth animations
 
-![Islands Dark preview](https://raw.githubusercontent.com/bwya77/vscode-dark-islands/main/assets/preview.png)
+![preview](https://raw.githubusercontent.com/bwya77/vscode-dark-islands/main/assets/CleanShot%202026-02-14%20at%2021.47.05%402x.png)
+
+![preview2](https://raw.githubusercontent.com/bwya77/vscode-dark-islands/main/assets/CleanShot%202026-02-14%20at%2021.45.00%402x.png)
+
+</div>
+
+---
+
+## What is this?
+
+Antigravity is Google's AI-first IDE built on the VS Code engine. While it's compatible with VS Code themes, it uses **different file paths** for extensions and settings — so existing VS Code installers don't work out of the box.
+
+This repo ports the beautiful Islands Dark theme + UI customizations to Antigravity with a fully automated installer.
 
 ---
 
 ## Features
 
-- 🎨 **Islands Dark color theme** — deep `#131217` base with warm syntax highlighting
-- 🪟 **Glass-morphism UI** — floating panels with rounded corners and directional lighting
-- 💊 **Pill-shaped activity bar** — centered icons with subtle glow on active state
-- 🌊 **Smooth animations** — transitions on breadcrumbs, tabs, status bar, and scrollbars
-- ✨ **File icon glow** — color-matched drop-shadow on file icons in the sidebar and tabs
+- 🎨 **Islands Dark color theme** — deep `#131217` base with warm syntax highlighting across JS, TS, Python, Go, Rust, HTML, CSS, JSON, YAML and more
+- 🪟 **Glass-morphism panels** — sidebar, editor, terminal and auxiliary bar with rounded corners, subtle borders and directional lighting
+- 💊 **Pill-shaped activity bar** — floating, centered icons with an embossed active state
+- 🌊 **Smooth animations** — breadcrumbs fade on hover, tab actions fade in, scrollbars transition on hover
+- ✨ **File icon glow** — color-matched `drop-shadow` on file icons in the sidebar and tabs
+- 🔔 **Rounded notifications** — toast and notification center with glass borders and deep shadows
 
 ---
 
 ## Installation
 
-### Automatic (recommended)
+### One-liner
 
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/p-lozano/antigravity-dark-islands/main/install.sh)
@@ -28,46 +43,45 @@ bash <(curl -fsSL https://raw.githubusercontent.com/p-lozano/antigravity-dark-is
 
 ### Manual
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/p-lozano/antigravity-dark-islands
-   cd antigravity-dark-islands
-   ```
+```bash
+git clone https://github.com/p-lozano/antigravity-dark-islands
+cd antigravity-dark-islands
+bash install.sh
+```
 
-2. Run the installer:
-   ```bash
-   bash install.sh
-   ```
+After installation, **restart Antigravity**.
 
-3. Restart Antigravity.
-
-4. If prompted with a *"corrupt installation"* warning, click the gear icon and select **Don't Show Again** — this is expected when CSS injection is active.
+> **"Corrupt installation" warning?** That's expected when CSS injection is active. Click the gear icon → **Don't Show Again**.
 
 ---
 
 ## Fonts
 
-The theme looks best with these fonts:
+The theme looks best with these three fonts:
 
-| Font | Use | Download |
-|------|-----|----------|
+| Font | Used for | Download |
+|------|----------|----------|
 | **IBM Plex Mono** | Editor | [ibm.com/plex](https://www.ibm.com/plex/) |
 | **FiraCode Nerd Font Mono** | Terminal | [nerdfonts.com](https://www.nerdfonts.com/) |
-| **Bear Sans UI** | UI panels & tabs | [Original repo](https://github.com/bwya77/vscode-dark-islands) |
+| **Bear Sans UI** | UI panels & tabs | [bwya77/vscode-dark-islands](https://github.com/bwya77/vscode-dark-islands) |
 
-Place `.otf` files in the `fonts/` folder and re-run `install.sh` to install them automatically.
+Place the `.otf` files in the `fonts/` folder and re-run `install.sh` — they'll be installed to Font Book automatically.
 
 ---
 
 ## How it works
 
-This installer:
+The installer does 5 things:
 
-1. Copies the theme extension to `~/.antigravity/extensions/`
-2. Installs [Custom UI Style](https://marketplace.visualstudio.com/items?itemName=subframe7536.custom-ui-style) via the Antigravity CLI
-3. Merges the theme settings into `~/Library/Application Support/Antigravity/User/settings.json` (your existing settings are backed up first)
+1. **Copies the theme extension** to `~/.antigravity/extensions/`
+2. **Installs [Custom UI Style](https://github.com/subframe7536/vscode-custom-ui-style)** via the Antigravity CLI (enables CSS injection)
+3. **Installs fonts** to `~/Library/Fonts` (macOS) or `~/.local/share/fonts` (Linux)
+4. **Merges settings** into `~/Library/Application Support/Antigravity/User/settings.json` — your existing settings are backed up first, nothing gets overwritten blindly
+5. **Reloads Antigravity** to apply changes
 
-### Path differences vs. VS Code
+### Why not just use the original installer?
+
+Antigravity stores everything in different paths than VS Code:
 
 | | VS Code | Antigravity |
 |---|---|---|
@@ -79,8 +93,10 @@ This installer:
 
 ## Credits
 
-- Original theme: [bwya77/vscode-dark-islands](https://github.com/bwya77/vscode-dark-islands)
-- CSS injection: [subframe7536/custom-ui-style](https://github.com/subframe7536/vscode-custom-ui-style)
+- Original theme and concept: [bwya77/vscode-dark-islands](https://github.com/bwya77/vscode-dark-islands)
+- CSS injection engine: [subframe7536/custom-ui-style](https://github.com/subframe7536/vscode-custom-ui-style)
+
+---
 
 ## License
 
