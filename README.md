@@ -55,6 +55,24 @@ After installation, **restart Antigravity**.
 
 ---
 
+## Uninstallation
+
+If you want to remove the theme and revert all changes:
+
+```bash
+bash uninstall.sh
+```
+
+This will:
+- Remove the Islands Dark theme extension
+- Optionally uninstall Custom UI Style extension
+- Restore your settings from the backup (if available)
+- Reload Antigravity
+
+> **Note:** Fonts are not automatically removed, as they might be used by other applications. You can manually delete them from `~/Library/Fonts` (macOS) or `~/.local/share/fonts` (Linux) if desired.
+
+---
+
 ## Fonts
 
 The theme looks best with these three fonts:
